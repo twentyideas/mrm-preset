@@ -1,0 +1,36 @@
+{
+  "name": "@20i/mrm-preset",
+  "version": "1.0.0",
+  "description": "mrm preset to set up eslint, prettier, lint-staged, husky, and typescript",
+  "repository": "https://github.com/twentyideas/mrm-preset.git",
+  "author": "Greg McKelvey <mckelveygreg@gmail.com>",
+  "license": "MIT",
+  "main": "config.json",
+  "files": [
+    "config.json",
+    "*/index.js"
+  ],
+  "keywords": [
+    "mrm",
+    "mrm-preset"
+  ],
+  "dependencies": {
+    "mrm-core": "^6.1.7"
+  },
+  "packageManager": "yarn@3.1.1",
+  "devDependencies": {
+    "@20i/eslint-config": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-prettier": "latest",
+    "mrm": "^3.0.10",
+    "prettier": "latest",
+    "typescript": "^4.5.2"
+  },
+  "scripts": {
+    "lint": "yarn eslint --max-warnings=0 --cache --fix \"**/*.{js,ts,jsx,tsx}\"",
+    "pretest": "npm run lint && tsc --noEmit"
+  }
+}

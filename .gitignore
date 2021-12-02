@@ -1,0 +1,16 @@
+node_modules/
+.DS_Store
+.vscode/
+.idea/
+# yarn berry: https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*      # Comment out for zero install support
+.yarn/cache # Replace with !.yarn/cache for zero install support
+
+.eslintcache
+.pnp.* # Comment out for zero install support

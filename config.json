@@ -1,0 +1,15 @@
+{
+  "url": "https://github.com/twentyideas/mrm-preset.git",
+  "indent": "tab",
+  "readmeFile": "README.md",
+  "aliases": {
+    "node": [
+      "readme",
+      "editorconfig",
+      "gitignore",
+      "nvm",
+      "eslint",
+      "typescript"
+    ]
+  }
+}
