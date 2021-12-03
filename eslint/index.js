@@ -20,7 +20,9 @@ module.exports = function () {
     }
     else if (hasReact) {
         console.warn("Found react, adding eslint react rules");
-        packages.push("eslint-plugin-react", "eslint-plugin-react-hooks", "eslint-plugin-jsx-a11y", "eslint-plugin-import", "eslint-config-react-app", "eslint-config-flowtype");
+        packages.push("eslint-plugin-react", "eslint-plugin-react-hooks", "eslint-plugin-jsx-a11y", "eslint-plugin-import", 
+        // TODO replace dependency on react-app
+        "eslint-config-react-app", "eslint-plugin-flowtype");
         baseExtends = "@20i/eslint-config/react";
     }
     const eslintrc = (0, mrm_core_1.json)(".eslintrc", {});

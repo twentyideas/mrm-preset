@@ -25,8 +25,9 @@ module.exports = function () {
 			"eslint-plugin-react-hooks",
 			"eslint-plugin-jsx-a11y",
 			"eslint-plugin-import",
+			// TODO replace dependency on react-app
 			"eslint-config-react-app",
-			"eslint-config-flowtype"
+			"eslint-plugin-flowtype"
 		)
 		baseExtends = "@20i/eslint-config/react"
 	}
