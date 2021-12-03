@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const child_process_1 = require("child_process");
 const fs = require("fs");
 const mrm_core_1 = require("mrm-core");
+const path = require("path");
 // copied from mrm-core/src/npm.js
 /*
  * Is project using Yarn?
@@ -30,19 +31,15 @@ else
 fi
 `;
 module.exports = function task() {
-    (0, mrm_core_1.copyFiles)(".", ".lintstagedrc.js");
+    (0, mrm_core_1.copyFiles)(path.resolve(__dirname, ".."), ".lintstagedrc.js");
     if (isUsingYarnBerry()) {
         (0, child_process_1.execSync)("yarn dlx husky-init --yarn2");
         const pkg = (0, mrm_core_1.packageJson)();
         // currently the husky install isn't working, so this shims in the correct commands
         const prepublishCmd = pkg.getScript("prepublishOnly");
         if (prepublishCmd) {
-            console.log("what");
             pkg.removeScript("prepublishOnly");
             const prepackCmd = pkg.getScript("prepack");
-            console.log(prepackCmd);
-            console.log(prepublishCmd);
-            console.log(!prepackCmd.includes(prepublishCmd));
             if (!prepackCmd) {
                 pkg.setScript("prepack", prepublishCmd);
             }

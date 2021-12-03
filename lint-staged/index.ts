@@ -1,6 +1,7 @@
 import { execSync } from "child_process"
 import * as fs from "fs"
 import { copyFiles, install, lines, packageJson } from "mrm-core"
+import * as path from "path"
 
 // copied from mrm-core/src/npm.js
 /*
@@ -32,19 +33,15 @@ fi
 `
 
 module.exports = function task() {
-	copyFiles(".", ".lintstagedrc.js")
+	copyFiles(path.resolve(__dirname, ".."), ".lintstagedrc.js")
 	if (isUsingYarnBerry()) {
 		execSync("yarn dlx husky-init --yarn2")
 		const pkg = packageJson()
 		// currently the husky install isn't working, so this shims in the correct commands
 		const prepublishCmd = pkg.getScript("prepublishOnly")
 		if (prepublishCmd) {
-			console.log("what")
 			pkg.removeScript("prepublishOnly")
 			const prepackCmd = pkg.getScript("prepack")
-			console.log(prepackCmd)
-			console.log(prepublishCmd)
-			console.log(!prepackCmd.includes(prepublishCmd))
 			if (!prepackCmd) {
 				pkg.setScript("prepack", prepublishCmd)
 			} else if (prepackCmd && !prepackCmd.includes(prepublishCmd)) {
