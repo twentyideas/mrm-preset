@@ -1,6 +1,6 @@
 {
   "name": "@20i/mrm-preset",
-  "version": "1.0.0-alpha.8",
+  "version": "1.0.0",
   "description": "mrm preset to set up eslint, prettier, lint-staged, husky, and typescript",
   "repository": "https://github.com/twentyideas/mrm-preset.git",
   "homepage": "https://github.com/twentyideas/mrm-preset",
