@@ -35,7 +35,7 @@ module.exports = function () {
         .save();
     // tsconfig.eslint.json
     // extend your base config to share compilerOptions, etc
-    (0, mrm_core_1.json)("tsconfig.eslint.json")
+    (0, mrm_core_1.json)("tsconfig.eslint.json", {})
         .set({
         extends: "./tsconfig.json",
         compilerOptions: {
