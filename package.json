@@ -1,37 +1,44 @@
 {
   "name": "@20i/mrm-preset",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.8",
   "description": "mrm preset to set up eslint, prettier, lint-staged, husky, and typescript",
   "repository": "https://github.com/twentyideas/mrm-preset.git",
+  "homepage": "https://github.com/twentyideas/mrm-preset",
   "author": "Greg McKelvey <mckelveygreg@gmail.com>",
+  "keywords": [
+    "mrm",
+    "mrm-preset",
+    "20i",
+    "twenty ideas",
+    "eslint",
+    "prettier",
+    "lint-staged",
+    "husky",
+    "typescript"
+  ],
   "license": "MIT",
-  "private": false,
   "main": "config.json",
   "files": [
     "config.json",
     ".lintstagedrc.js",
     "*/index.js"
   ],
-  "keywords": [
-    "mrm",
-    "mrm-preset"
-  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "packageManager": "yarn@3.1.1",
   "dependencies": {
     "mrm-core": "^6.1.7"
   },
-  "packageManager": "yarn@3.1.1",
   "devDependencies": {
-    "@20i/eslint-config": "latest",
-    "@typescript-eslint/eslint-plugin": "latest",
-    "@typescript-eslint/parser": "latest",
-    "eslint": "latest",
-    "eslint-config-prettier": "latest",
-    "eslint-plugin-prettier": "latest",
+    "@20i/eslint-config": "^1.1.0",
+    "eslint": "^8.3.0",
     "husky": "^7.0.0",
-    "lint-staged": "latest",
+    "lint-staged": "^12.1.0",
     "mrm": "^3.0.10",
     "pinst": "^2.0.0",
-    "prettier": "latest",
+    "prettier": "^2.5.0",
     "typescript": "^4.5.2"
   },
   "scripts": {

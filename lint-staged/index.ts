@@ -66,5 +66,5 @@ module.exports = function task() {
 			.save()
 	}
 	packageJson().appendScript("precommit", "npx lint-staged").save()
-	install(["lint-staged", "husky"])
+	install({ "lint-staged": "^12.1.0", husky: "^7.0.0" })
 }

@@ -3,7 +3,7 @@
   "indent": "tab",
   "readmeFile": "README.md",
   "aliases": {
-    "node": [
+    "all": [
       "readme",
       "editorconfig",
       "gitignore",

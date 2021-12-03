@@ -66,5 +66,5 @@ module.exports = function task() {
             .save();
     }
     (0, mrm_core_1.packageJson)().appendScript("precommit", "npx lint-staged").save();
-    (0, mrm_core_1.install)(["lint-staged", "husky"]);
+    (0, mrm_core_1.install)({ "lint-staged": "^12.1.0", husky: "^7.0.0" });
 };
