@@ -25,12 +25,19 @@
     "eslint": "latest",
     "eslint-config-prettier": "latest",
     "eslint-plugin-prettier": "latest",
+    "husky": "^7.0.0",
+    "lint-staged": "latest",
     "mrm": "^3.0.10",
+    "pinst": "^2.0.0",
     "prettier": "latest",
     "typescript": "^4.5.2"
   },
   "scripts": {
     "lint": "yarn eslint --max-warnings=0 --cache --fix \"**/*.{js,ts,jsx,tsx}\"",
-    "pretest": "npm run lint && tsc --noEmit"
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable",
+    "pretest": "tsc --noEmit",
+    "precommit": "npx lint-staged"
   }
 }

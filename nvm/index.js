@@ -9,4 +9,5 @@ module.exports = function task() {
         // Update or create a file
         .save();
 };
-module.exports.description = "Add lines to .nvmrc";
+// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+module.exports.description = "Add default version to .nvmrc";

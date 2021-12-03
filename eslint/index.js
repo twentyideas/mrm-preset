@@ -1,8 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const mrm_core_1 = require("mrm-core");
-module.exports = function (config) {
-    console.log("config", config);
+module.exports = function () {
     const packages = [
         "eslint",
         "@typescript-eslint/eslint-plugin",
@@ -24,9 +23,9 @@ module.exports = function (config) {
         packages.push("eslint-plugin-react", "eslint-plugin-react-hooks", "eslint-plugin-jsx-a11y", "eslint-plugin-import", "eslint-config-react-app", "eslint-config-flowtype");
         baseExtends = "@20i/eslint-config/react";
     }
-    const eslintrc = (0, mrm_core_1.json)(".eslintrc");
+    const eslintrc = (0, mrm_core_1.json)(".eslintrc", {});
     eslintrc
-        .set({
+        .merge({
         extends: [baseExtends],
         parserOptions: {
             project: ["./tsconfig.eslint.json"],
@@ -36,7 +35,7 @@ module.exports = function (config) {
         .save();
     // tsconfig.eslint.json
     // extend your base config to share compilerOptions, etc
-    const tsconfig = (0, mrm_core_1.json)("tsconfig.eslint.json")
+    (0, mrm_core_1.json)("tsconfig.eslint.json")
         .set({
         extends: "./tsconfig.json",
         compilerOptions: {
@@ -46,7 +45,7 @@ module.exports = function (config) {
     })
         .save();
     // package.json
-    const pkg = (0, mrm_core_1.packageJson)()
+    (0, mrm_core_1.packageJson)()
         .setScript("lint", 'yarn eslint --max-warnings=0 --cache --fix "**/*.{js,ts,jsx,tsx}"')
         .save();
     // add .eslintcache to gitignore

@@ -2,10 +2,17 @@
 	"extends": [
 		"@20i/eslint-config"
 	],
+	"ignorePatterns": [
+		"**/*.js"
+	],
+	"env": {
+		"node": true,
+		"es6": true,
+		"browser": true
+	},
 	"parserOptions": {
 		"project": [
 			"./tsconfig.eslint.json"
 		]
-	},
-	"ignorePatterns": []
+	}
 }

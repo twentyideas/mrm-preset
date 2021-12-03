@@ -7,5 +7,5 @@ TODO:
 - [x] add .nvmrc
 - [x] add .eslintrc
 - [x] add tsconfig.eslint.json
-- [ ] add .lintstagedrc.js
-- [ ] add husky
+- [x] add .lintstagedrc.js
+- [x] add husky

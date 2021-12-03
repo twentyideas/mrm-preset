@@ -1,7 +1,6 @@
 import { install, json, lines, packageJson } from "mrm-core"
 
-module.exports = function (config: any) {
-	console.log("config", config)
+module.exports = function () {
 	const packages = [
 		"eslint",
 		"@typescript-eslint/eslint-plugin",
@@ -31,9 +30,9 @@ module.exports = function (config: any) {
 		)
 		baseExtends = "@20i/eslint-config/react"
 	}
-	const eslintrc = json(".eslintrc")
+	const eslintrc = json(".eslintrc", {})
 	eslintrc
-		.set({
+		.merge({
 			extends: [baseExtends],
 			parserOptions: {
 				project: ["./tsconfig.eslint.json"],
@@ -44,7 +43,7 @@ module.exports = function (config: any) {
 
 	// tsconfig.eslint.json
 	// extend your base config to share compilerOptions, etc
-	const tsconfig = json("tsconfig.eslint.json")
+	json("tsconfig.eslint.json")
 		.set({
 			extends: "./tsconfig.json",
 			compilerOptions: {
@@ -55,7 +54,7 @@ module.exports = function (config: any) {
 		.save()
 
 	// package.json
-	const pkg = packageJson()
+	packageJson()
 		.setScript(
 			"lint",
 			'yarn eslint --max-warnings=0 --cache --fix "**/*.{js,ts,jsx,tsx}"'

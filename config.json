@@ -9,7 +9,8 @@
       "gitignore",
       "nvm",
       "eslint",
-      "typescript"
+      "typescript",
+      "lint-staged"
     ]
   }
 }

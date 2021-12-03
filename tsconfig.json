@@ -2,16 +2,14 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "allowJs": true,
-    "checkJs": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
     "moduleResolution": "node",
+    "strict": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "noUnusedLocals": true,
     "pretty": true,
-    "lib": ["esnext"]
+    "lib": [
+      "esnext"
+    ]
   }
 }
