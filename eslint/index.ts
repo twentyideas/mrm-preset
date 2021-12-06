@@ -2,8 +2,8 @@ import { install, json, lines, packageJson } from "mrm-core"
 
 module.exports = function () {
 	const packages = {
-		"@20i/eslint-config": "^1.1.0",
-		eslint: "^8.3.0",
+		"@20i/eslint-config": "^1.2.0",
+		eslint: "^8.4.0",
 		prettier: "^2.5.0",
 		typescript: "^4.5.0",
 	}
@@ -13,8 +13,7 @@ module.exports = function () {
 		"dependencies.react-native"
 	) as boolean
 	if (hasReactNative) {
-		// TODO: add react-native
-		console.warn("React native not setup yet")
+		baseExtends = "@20i/eslint-config/react-native"
 	} else if (hasReact) {
 		baseExtends = "@20i/eslint-config/react"
 	}
