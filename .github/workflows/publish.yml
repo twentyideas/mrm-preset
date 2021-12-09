@@ -16,7 +16,6 @@ jobs:
           cache: yarn
           cache-dependency-path: yarn.lock
       - run: yarn
-      - run: yarn build
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

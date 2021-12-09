@@ -63,9 +63,6 @@ module.exports = function task({
 							run: "yarn",
 						},
 						{
-							run: "yarn build",
-						},
-						{
 							run: "npm publish",
 							env: {
 								NODE_AUTH_TOKEN: "${{ SECRETS.NPM_TOKEN }}",
