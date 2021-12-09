@@ -102,7 +102,7 @@ module.exports = function task({
 		readme
 			// Add status badge to Readme
 			.addBadge(
-				`${github}/workflows/Publish%20CI/badge.svg`,
+				`${github}/actions/workflows/${workflowFile}/badge.svg`,
 				`${github}/actions`,
 				"NPM Publish status"
 			)
