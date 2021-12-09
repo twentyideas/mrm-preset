@@ -1,6 +1,8 @@
 # mrm-preset
 
-mrm preset to set up nvm, eslint, prettier, lint-staged, husky, and typescript
+mrm preset to set up nvm, eslint, prettier, lint-staged, husky, and typescript.
+
+Also includes a separate task for [publishing npm libraries](#publish-to-npm).
 
 ## Usage
 
@@ -72,3 +74,26 @@ Will only run if a license is not already present.
 #### [editorconfig](https://github.com/sapegin/mrm/tree/master/packages/mrm-task-editorconfig)
 
 This is a nifty config to help your editor have better default values. For more options, check out [editorconfig docs](https://editorconfig.org/).
+
+### Not included in `all`
+#### ci-publish
+```bash
+npx mrm ci-publish --preset @20i/mrm-preset
+```
+
+`ci-publish` will add a `.github/workflows/ci-publish.yml` file to your project for auto publishing to npm on releases. It also adds a `release.yml` template to help with Github's auto release notes. 
+
+## Dev
+### Publish to npm
+
+This package is published to npm using the [Publish CI](
+https://github.com/twentyideas/20i-cdk/.github/workflows/publish.yml) workflow.
+
+The workflow is configured to publish the package to npm after a successful release and package.json version bump.
+
+To use,
+1. Add a publish `NPM_TOKEN` to your github repo secrets
+2. Bump the package.json version
+3. Make a release
+
+> For effective changelogs, be sure to add the labels found in [release.yml](./.github/release.yml) to PRs.
