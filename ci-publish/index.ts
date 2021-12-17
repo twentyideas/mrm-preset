@@ -43,7 +43,7 @@ module.exports = function task({
 				},
 			},
 			jobs: {
-				build: {
+				Publish: {
 					"runs-on": "ubuntu-latest",
 					steps: [
 						{
@@ -65,7 +65,7 @@ module.exports = function task({
 						{
 							run: "npm publish",
 							env: {
-								NODE_AUTH_TOKEN: "${{ SECRETS.NPM_TOKEN }}",
+								NODE_AUTH_TOKEN: "${{ secrets.NPM_TOKEN }}",
 							},
 						},
 					],
