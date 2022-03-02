@@ -1,11 +1,11 @@
-import { install, json, lines, packageJson } from "mrm-core"
+import { copyFiles, install, json, lines, packageJson } from "mrm-core"
 
-module.exports = function () {
+module.exports = function eslint() {
 	const packages = {
-		"@20i/eslint-config": "^1.2.0",
-		eslint: "^8.4.0",
-		prettier: "^2.5.0",
-		typescript: "^4.5.0",
+		"@20i/eslint-config": "^2.0.2",
+		eslint: "^8.10.0",
+		prettier: "^2.5.1",
+		typescript: "^4.6.2",
 	}
 	let baseExtends = "@20i/eslint-config"
 	const hasReact = json("package.json").get("dependencies.react") as boolean
@@ -54,4 +54,8 @@ module.exports = function () {
 
 	// Install dependencies
 	install(packages)
+
+	// copy .prettierrc from @20i/eslint-config
+	console.log("Copying .prettierrc from @20i/eslint-config")
+	copyFiles("./node_modules/@20i/eslint-config/", ".prettierrc")
 }

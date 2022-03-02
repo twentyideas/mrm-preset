@@ -1,6 +1,6 @@
 {
   "name": "@20i/mrm-preset",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "mrm preset to set up eslint, prettier, lint-staged, husky, and typescript",
   "repository": "https://github.com/twentyideas/mrm-preset.git",
   "homepage": "https://github.com/twentyideas/mrm-preset",
@@ -34,17 +34,17 @@
     "semver-utils": "^1.1.4"
   },
   "devDependencies": {
-    "@20i/eslint-config": "^1.2.0",
+    "@20i/eslint-config": "^2.0.1",
     "@types/got": "^9.6.12",
-    "@types/lodash": "^4.14.178",
+    "@types/lodash": "^4.14.179",
     "@types/semver-utils": "^1.1.1",
-    "eslint": "^8.4.0",
+    "eslint": "^8.10.0",
     "husky": "^7.0.4",
-    "lint-staged": "^12.1.2",
+    "lint-staged": "^12.3.4",
     "mrm": "^3.0.10",
-    "pinst": "^2.1.6",
+    "pinst": "^3.0.0",
     "prettier": "^2.5.1",
-    "typescript": "^4.5.2"
+    "typescript": "^4.6.2"
   },
   "scripts": {
     "lint": "yarn eslint --max-warnings=0 --cache --fix \"**/*.{js,ts,jsx,tsx}\"",
