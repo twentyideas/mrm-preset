@@ -2,7 +2,7 @@ import { copyFiles, install, json, lines, packageJson } from "mrm-core"
 
 module.exports = function eslint() {
 	const packages = {
-		"@20i/eslint-config": "^2.0.2",
+		"@20i/eslint-config": "^2.0.3",
 		eslint: "^8.10.0",
 		prettier: "^2.5.1",
 		typescript: "^4.6.2",

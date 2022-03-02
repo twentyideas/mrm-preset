@@ -34,7 +34,7 @@
     "semver-utils": "^1.1.4"
   },
   "devDependencies": {
-    "@20i/eslint-config": "^2.0.1",
+    "@20i/eslint-config": "^2.0.3",
     "@types/got": "^9.6.12",
     "@types/lodash": "^4.14.179",
     "@types/semver-utils": "^1.1.1",
