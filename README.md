@@ -1,6 +1,6 @@
 # mrm-preset
 [![publish](https://github.com/twentyideas/mrm-preset/actions/workflows/publish.yml/badge.svg)](https://github.com/twentyideas/mrm-preset/actions/workflows/publish.yml)
-https://img.shields.io/npm/v/@20i/mrm-preset
+![npm (scoped)](https://img.shields.io/npm/v/@20i/mrm-preset)
 
 mrm preset to set up nvm, eslint, prettier, lint-staged, husky, and typescript.
 
